@@ -1,0 +1,18 @@
+.user .user-form,
+.user-index ul{
+  max-width: 500px;
+}
+.user h2{
+  color: tomato;
+}
+.user .user-form label,
+.user-show label{
+  display: inline-block;
+  width: 80px;
+}
+.user .user-menu form{
+  display: inline-block;
+}
+.inline{
+  display: inline;
+}

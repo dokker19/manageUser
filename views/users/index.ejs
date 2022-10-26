@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="container user user-index">
+      <h2>Index</h2>
+      <ul class="list-group">
+        <% users.forEach(function(user) { %>
+          <li class="list-group-item">
+            <a href="/users/<%= user._id %>"><%= user.username %></user.username></a>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>
