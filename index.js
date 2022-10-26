@@ -7,9 +7,9 @@ const methodOverride = require('method-override')
 const app = express()
 
 //DB setting
-
-mongoose.connect("mongodb+srv://" + process.env.DBUser + ":" + process.env.DBPW + "@cluster0.ua005ww.mongodb.net/?retryWrites=true&w=majority")
-const db = mongoose.connection;
+//mongoose.connect("mongodb+srv://" + process.env.DBUser + ":" + process.env.DBPW + "@cluster0.ua005ww.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect(process.env.DATABASE)
+const db = mongoose.connection
 db.once('open', () => {
     console.log('DB connected')
 })
@@ -39,7 +39,7 @@ app.use('/', require('./routes/home'));
 app.use('/users', require('./routes/users'))
 
 //Port setting
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 app.listen(port, () => {
     console.log('server on! http://localhost:' + port)
 })
