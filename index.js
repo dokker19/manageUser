@@ -8,7 +8,7 @@ const app = express()
 
 //DB setting
 
-mongoose.connect("mongodb+srv://" + process.env.DBUser + ":" + process.env.DBPW + "@cluster0.ua005ww.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://" + "DBUser" + ":" + "qwer1023" + "@cluster0.ua005ww.mongodb.net/?retryWrites=true&w=majority")
 const db = mongoose.connection;
 db.once('open', () => {
     console.log('DB connected')
